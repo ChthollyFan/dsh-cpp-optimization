@@ -1,0 +1,3 @@
+# 包内全部是文本文件（Markdown / JS / JSON / YAML / SVG），统一以 LF 存储与检出，
+# 避免 Windows 上 core.autocrlf 把工作区改成 CRLF 造成整文件 diff。
+* text=auto eol=lf

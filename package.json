@@ -40,7 +40,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chtholly-fan/dsh-cpp-optimization.git"
+    "url": "git+https://github.com/ChthollyFan/dsh-cpp-optimization.git"
   },
   "publishConfig": {
     "access": "public"
