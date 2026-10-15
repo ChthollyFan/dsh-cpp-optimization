@@ -8,19 +8,21 @@
 
 ## 安装
 
-在 DSH 会话中让智能体安装本包，或自行调用 `plugin_manager` 工具的 `install_bundle` 动作；`target` 传包名或本地目录的绝对路径：
+用 dsh CLI 装到指定 profile：
 
-```
-target: @chtholly-fan/dsh-cpp-optimization
-```
-
-也可以直接从本仓库目录安装：
-
-```
-target: <本仓库目录的绝对路径>
+```bash
+dsh plugin --profile web add @chtholly-fan/dsh-cpp-optimization
 ```
 
-安装由 `plugin_manager` 完成：它会写入所在 profile 的包依赖并选中本包的 `cordis.patch.yml`。**不要手动改 profile 的 `package.json` 或 `cordis.patch.yml`，也不要在 profile 目录里跑 pnpm。**
+`--profile` 填要装到的 profile（这里按 web 写，`tui`、`desktop` 等同理）；`dsh plugin` 之后的参数会原样交给 pnpm，所以从本地目录安装时把包名换成目录的绝对路径即可：
+
+```bash
+dsh plugin --profile web add <本仓库目录的绝对路径>
+```
+
+本包是 bundle 插件：安装时会写入该 profile 的包依赖，并选中本包的 `cordis.patch.yml`。**不要手动改 profile 的 `package.json` 或 `cordis.patch.yml`，也不要在 profile 目录里跑 pnpm。**
+
+备选方式：在 DSH 会话里让智能体用 `plugin_manager` 工具的 `install_bundle` 动作安装，`target` 同样传包名或目录的绝对路径。
 
 安装后无需重启即可在会话目录里看到 `cpp-opt-audit`；如果替换了已安装的同名包，需要重启以加载新的模块。
 

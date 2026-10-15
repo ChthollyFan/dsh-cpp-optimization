@@ -8,13 +8,21 @@ Its central constraint is that the **target project's actual C++ standard is det
 
 ## Install
 
-Ask the agent in a DSH session to install this package, or call the `plugin_manager` tool with the `install_bundle` action, passing the package name or the absolute path of this repository as `target`:
+Install it into a profile with the dsh CLI:
 
-```
-target: @chtholly-fan/dsh-cpp-optimization
+```bash
+dsh plugin --profile web add @chtholly-fan/dsh-cpp-optimization
 ```
 
-Installation writes the profile's package dependency and selects this package's `cordis.patch.yml`. Do not edit the profile's `package.json` or `cordis.patch.yml` by hand, and do not run pnpm inside the profile directory.
+`--profile` picks the profile to install into (web here; `tui`, `desktop` and others work the same), and everything after `dsh plugin` is passed straight to pnpm — so to install from a local checkout, pass the directory's absolute path instead of the package name:
+
+```bash
+dsh plugin --profile web add <absolute path of this repository>
+```
+
+This is a bundle plugin: installation writes the profile's package dependency and selects this package's `cordis.patch.yml`. Do not edit the profile's `package.json` or `cordis.patch.yml` by hand, and do not run pnpm inside the profile directory.
+
+Alternative: ask the agent in a DSH session to install it with the `plugin_manager` tool's `install_bundle` action, passing the package name or the directory's absolute path as `target`.
 
 The skill appears in the session catalog without a restart; replacing an already installed copy of the package requires a restart to load the new module.
 
