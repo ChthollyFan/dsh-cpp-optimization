@@ -1,0 +1,48 @@
+{
+  "name": "@chtholly-fan/dsh-cpp-optimization",
+  "version": "1.0.0",
+  "description": "DSH 插件包：提供 cpp-opt-audit skill，按目标工程实际 C++ 标准审查或编写又快又安全的底层 C++ 代码（RAII、移动语义、异常安全、性能与内存、并发、ABI）。",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "assets",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "icon": "./icon.svg",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-bundle",
+    "skill",
+    "cpp",
+    "c++",
+    "code-review",
+    "raii",
+    "move-semantics",
+    "exception-safety",
+    "performance"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chtholly-fan/dsh-cpp-optimization.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

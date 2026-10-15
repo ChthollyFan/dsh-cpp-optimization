@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "C++ Optimization Audit",
+    "description": "Adds the cpp-opt-audit skill: audits or writes fast and safe low-level C++ against the project's actual C++ standard."
+  }
+}

@@ -1,0 +1,6 @@
+# 安装到某个 profile 时插入的插件行。
+# id 必须全局唯一；name 使用本包名，解析后由 index.js 的 apply() 注册 skill 提供方。
+- insert:
+    - id: cpp-opt-audit
+      name: '@chtholly-fan/dsh-cpp-optimization'
+      config: {}

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "C++ 优化与安全审查",
+    "description": "提供 cpp-opt-audit skill：按目标工程实际 C++ 标准，审查或编写又快又安全的底层 C++ 代码。"
+  }
+}

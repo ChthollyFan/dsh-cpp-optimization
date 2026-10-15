@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="cpp-opt-audit">
+  <rect width="128" height="128" rx="26" fill="#16233d"/>
+  <text x="64" y="70" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="40" font-weight="700" fill="#dce8ff">C++</text>
+  <path d="M34 92 l14 14 30 -34" fill="none" stroke="#3ddc97" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
